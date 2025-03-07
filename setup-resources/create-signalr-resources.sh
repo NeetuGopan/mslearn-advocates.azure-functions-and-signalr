@@ -7,7 +7,7 @@ set -e
 # Check if user is logged into Azure CLI
 if ! az account show &> /dev/null
 then
-  prinft "You are not logged into Azure CLI. Please log in with 'az login' and try again.\n"
+  printf "You are not logged into Azure CLI. Please log in with 'az login' and try again.\n"
   exit 1
 fi
 printf "User logged in\n"
