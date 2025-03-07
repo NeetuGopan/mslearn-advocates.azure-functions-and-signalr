@@ -4,7 +4,7 @@ const goingOutToSignalR = output.generic({
     type: 'signalR',
     name: 'signalR',
     hubName: 'default',
-    connectionStringSetting: 'Endpoint=https://msl-sigr-signalr8662c1e515.service.signalr.net;AccessKey=7Oy6OgxTGdIN5jesoYswBHEzZnw3Eh4HjavdkkiOgjgmB48SXH8DJQQJ99BCACHYHv6XJ3w3AAAAASRS3L3e;Version=1.0;',
+    connectionStringSetting: 'SIGNALR_CONNECTION_STRING',
 });
 
 export async function dataToMessage(documents: unknown[], context: InvocationContext): Promise<void> {
@@ -28,7 +28,7 @@ export async function dataToMessage(documents: unknown[], context: InvocationCon
 }
 
 const options: CosmosDBv4FunctionOptions = {
-    connection: 'AccountEndpoint=https://signalr-cosmos-9a135cabfa.documents.azure.com:443/;AccountKey=8pdZ1osNcVJUhlLNyiJyb0nJYqwqhDdX3NW0OeMix5ZX4iG1YCFX2EEUZHSYunm85POFzkWL71kPACDbrcduSw==;',
+    connection: 'COSMOSDB_CONNECTION_STRING',
     databaseName: 'stocksdb',
     containerName: 'stocks',
     createLeaseContainerIfNotExists: true,
